@@ -35,10 +35,14 @@ parse:
     # including those that are enabled by default!
     - amsmath
     - dollarmath
+    - html_image
+
 
 sphinx:
   config:
     bibtex_reference_style: author_year
+  extra_extensions:
+    - sphinx_proof
 
 
 
