@@ -18,7 +18,7 @@ git add *
 git commit -m "initial commit"
 ```
 
-Make a new Github repo at [](). After registering/signing, click on "+" and "New repository". For this repo, I chose `template-for-jupyter-book` as the name and then clicked the green button "Create repository". Then I copy pasted from the page that Github presented to me to my commandline
+Make a new [Github repo](https://github.com/). After registering/signing in, click on "+" and "New repository". For this repo, I chose `template-for-jupyter-book` as the name and then clicked the green button "Create repository". Then I copy pasted from the page that Github presented to me to my commandline
 
 ```
 git branch -M main
@@ -36,7 +36,7 @@ To create the book locally and open it in my browser, I run (the `open` command 
 jb build . ; open _build/html/index.html
 ```
 
-### publish the book
+## publish the book
 
 To publish the book, install `ghp-import` with `pip install ghp-import`. Then run 
 
@@ -46,7 +46,7 @@ ghp-import -n -p -f _build/html
 
 This makes the [book available online](https://alexhkurz.github.io/template-for-jupyter-book). It also keeps the source files in the `main`-branch separate from the files in `_build` in the `gh-pages` branch (Github knows that it should use the `gh-pages` branch to show the book as a webpage).
 
-### important commands
+## important commands
 
 If, for example, the table of contents in the left-hand pane behaves in a strange way, clean out `_build` by running `jupyter-book clean .`
 
