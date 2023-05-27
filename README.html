@@ -344,9 +344,12 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#publishing">publishing</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#important-commands">important commands</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">references</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-things-up">setting things up</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-the-book">create the book</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#publish-the-book">publish the book</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#important-commands">important commands</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -360,8 +363,9 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="readme">
 <h1>README<a class="headerlink" href="#readme" title="Permalink to this heading">#</a></h1>
-<p>(under construction)</p>
-<p>This is the template I copy if I want to create a new jupyter book. More details and references to jupyter books I keep at <span class="xref myst"><code class="docutils literal notranslate"><span class="pre">introduction</span> <span class="pre">to</span> <span class="pre">jupyter</span> <span class="pre">book</span></code></span>.</p>
+<p>This is the template I copy if I want to create a new jupyter book. More details and references to jupyter books I keep at <a class="reference external" href="https://github.com/alexhkurz/introduction-to-jupyter-book.git"><code class="docutils literal notranslate"><span class="pre">introduction-to-jupyter-book</span></code></a>.</p>
+<section id="setting-things-up">
+<h2>setting things up<a class="headerlink" href="#setting-things-up" title="Permalink to this heading">#</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">myNewFolder</span>
 <span class="n">cd</span> <span class="n">myNewFolder</span>
 <span class="n">cp</span> <span class="o">-</span><span class="n">r</span> <span class="o">../</span><span class="n">template</span><span class="o">-</span><span class="k">for</span><span class="o">-</span><span class="n">jupyter</span><span class="o">-</span><span class="n">book</span><span class="o">/*</span> <span class="o">.</span>
@@ -373,28 +377,32 @@ document.write(`
 <span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;initial commit&quot;</span>
 </pre></div>
 </div>
+<p>Make a new Github repo at <span class="xref myst"></span>. After registering/signing, click on “+” and “New repository”. For this repo, I chose <code class="docutils literal notranslate"><span class="pre">template-for-jupyter-book</span></code> as the name and then clicked the green button “Create repository”. Then I copy pasted from the page that Github presented to me to my commandline</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">branch</span> <span class="o">-</span><span class="n">M</span> <span class="n">main</span>
+<span class="n">git</span> <span class="n">remote</span> <span class="n">add</span> <span class="n">origin</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">alexhkurz</span><span class="o">/</span><span class="n">template</span><span class="o">-</span><span class="k">for</span><span class="o">-</span><span class="n">jupyter</span><span class="o">-</span><span class="n">book</span><span class="o">.</span><span class="n">git</span>
+<span class="n">git</span> <span class="n">push</span> <span class="o">-</span><span class="n">u</span> <span class="n">origin</span> <span class="n">main</span>
+</pre></div>
+</div>
+<p>Make sure to update <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code> with the address of the Github repository, which for this repository was <code class="docutils literal notranslate"><span class="pre">https://github.com/alexhkurz/template-for-jupyter-book.git</span></code>.</p>
+</section>
+<section id="create-the-book">
+<h2>create the book<a class="headerlink" href="#create-the-book" title="Permalink to this heading">#</a></h2>
+<p>To create the book locally and open it in my browser, I run (the <code class="docutils literal notranslate"><span class="pre">open</span></code> command may be specific to a mac)</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jb</span> <span class="n">build</span> <span class="o">.</span> <span class="p">;</span> <span class="nb">open</span> <span class="n">_build</span><span class="o">/</span><span class="n">html</span><span class="o">/</span><span class="n">index</span><span class="o">.</span><span class="n">html</span>
 </pre></div>
 </div>
-<section id="publishing">
-<h2>publishing<a class="headerlink" href="#publishing" title="Permalink to this heading">#</a></h2>
-<p>(There is sth missing here.) After installing <code class="docutils literal notranslate"><span class="pre">ghp-import</span></code> with
-<code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">ghp-import</span></code> publish the book by running</p>
+<section id="publish-the-book">
+<h3>publish the book<a class="headerlink" href="#publish-the-book" title="Permalink to this heading">#</a></h3>
+<p>To publish the book, install <code class="docutils literal notranslate"><span class="pre">ghp-import</span></code> with <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">ghp-import</span></code>. Then run</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ghp</span><span class="o">-</span><span class="kn">import</span> <span class="o">-</span><span class="n">n</span> <span class="o">-</span><span class="n">p</span> <span class="o">-</span><span class="n">f</span> <span class="n">_build</span><span class="o">/</span><span class="n">html</span>
 </pre></div>
 </div>
-<p>This makes the <a class="reference external" href="https://alexhkurz.github.io/mathematics-for-philosophers">book available online</a>. It also keeps the source files in the <code class="docutils literal notranslate"><span class="pre">main</span></code>-branch separate from the files in <code class="docutils literal notranslate"><span class="pre">_build</span></code> in the <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> branch (Github knows that it should use the <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> branch to show the book as a webpage).</p>
+<p>This makes the <a class="reference external" href="https://alexhkurz.github.io/template-for-jupyter-book">book available online</a>. It also keeps the source files in the <code class="docutils literal notranslate"><span class="pre">main</span></code>-branch separate from the files in <code class="docutils literal notranslate"><span class="pre">_build</span></code> in the <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> branch (Github knows that it should use the <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> branch to show the book as a webpage).</p>
 </section>
 <section id="important-commands">
-<h2>important commands<a class="headerlink" href="#important-commands" title="Permalink to this heading">#</a></h2>
+<h3>important commands<a class="headerlink" href="#important-commands" title="Permalink to this heading">#</a></h3>
 <p>If, for example, the table of contents in the left-hand pane behaves in a strange way, clean out <code class="docutils literal notranslate"><span class="pre">_build</span></code> by running <code class="docutils literal notranslate"><span class="pre">jupyter-book</span> <span class="pre">clean</span> <span class="pre">.</span></code></p>
 </section>
-<section id="references">
-<h2>references<a class="headerlink" href="#references" title="Permalink to this heading">#</a></h2>
-<p><a class="reference external" href="https://jupyterbook.org/en/stable/start/your-first-book.html">Create your first book</a>.</p>
-<p><a class="reference external" href="https://jupyterbook.org/en/stable/content/math.html#math-and-equations">Math and equations</a>.</p>
-<p><a class="reference external" href="https://raw.githubusercontent.com/executablebooks/jupyter-book/master/.gitignore">.gitignore</a>.</p>
-<p><a class="reference external" href="https://jupyterbook.org/en/stable/start/publish.html">Publish your book online</a>.</p>
 </section>
 </section>
 
@@ -447,9 +455,12 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#publishing">publishing</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#important-commands">important commands</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">references</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-things-up">setting things up</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-the-book">create the book</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#publish-the-book">publish the book</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#important-commands">important commands</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
