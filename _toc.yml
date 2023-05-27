@@ -1,0 +1,11 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+# https://jupyterbook.org/en/stable/structure/configure.html
+
+format: jb-book
+root: intro.md
+
+parts:
+- caption: Part 1
+  chapters:
+  - file: contents/section1.md
