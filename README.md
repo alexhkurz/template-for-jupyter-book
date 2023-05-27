@@ -7,7 +7,7 @@ This is the template I copy if I want to create a new jupyter book. More details
 ```
 mkdir myNewFolder
 cd myNewFolder
-cp -r ../template-for-jupyter-book/* .
+cp -r ../template-for-jupyter-book/. .
 ```
 
 Adapt the files `README.md`, `_config.yml`, `_toc.yml`, `intro.md`, `contents/section1.md`.
