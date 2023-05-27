@@ -48,5 +48,5 @@ This makes the [book available online](https://alexhkurz.github.io/template-for-
 
 ## important commands
 
-If, for example, the table of contents in the left-hand pane behaves in a strange way, clean out `_build` by running `jupyter-book clean .`
+If, for example, the table of contents in the left-hand pane behaves in a strange way, clean out `_build` by running `jb clean .`
 
