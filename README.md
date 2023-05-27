@@ -44,7 +44,7 @@ To publish the book, install `ghp-import` with `pip install ghp-import`. Then ru
 ghp-import -n -p -f _build/html
 ```
 
-This makes the [book available online](https://github.com/alexhkurz/template-for-jupyter-book.git). It also keeps the source files in the `main`-branch separate from the files in `_build` in the `gh-pages` branch (Github knows that it should use the `gh-pages` branch to show the book as a webpage).
+This makes the [book available online](https://alexhkurz.github.io/template-for-jupyter-book). It also keeps the source files in the `main`-branch separate from the files in `_build` in the `gh-pages` branch (Github knows that it should use the `gh-pages` branch to show the book as a webpage).
 
 ### important commands
 
