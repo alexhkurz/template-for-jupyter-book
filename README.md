@@ -1,22 +1,32 @@
 # README
 
-This is the template I copy if I want to create a new jupyter book. More details and references to jupyter books I keep at [`introduction-to-jupyter-book`](https://github.com/alexhkurz/introduction-to-jupyter-book.git).
+[This](https://github.com/alexhkurz/template-for-jupyter-book) is the template I copy if I want to create a new jupyter book. More details and references to jupyter books I keep at [`introduction-to-jupyter-book`](https://github.com/alexhkurz/introduction-to-jupyter-book.git).
 
 ## setting things up
+
+### copy the template
 
 ```
 mkdir myNewFolder
 cd myNewFolder
 cp -r ../template-for-jupyter-book/. .
+rm -rf .git
+ls -a
 ```
 
-Adapt the files `README.md`, `_config.yml`, `_toc.yml`, `intro.md`, `contents/section1.md`.
+Have a look at all files copied. Make sure this includes a `.gitignore` but not a `.git`.
+
+Adapt the contents of the files `README.md`, `_config.yml`, `_toc.yml`, `intro.md`, `contents/section1.md`. Possibly rename `section1.md` (in which case you also have to change `_toc.yml`).
+
+### make a local git repository
 
 ```
 git init
 git add *
 git commit -m "initial commit"
 ```
+
+### make a copy of the repo "in the cloud"
 
 Make a new [Github repo](https://github.com/). After registering/signing in, click on "+" and "New repository". For this repo, I chose `template-for-jupyter-book` as the name and then clicked the green button "Create repository". Then I copy pasted from the page that Github presented to me to my commandline
 
